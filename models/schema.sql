@@ -15,10 +15,24 @@ CREATE TABLE product(
 
 CREATE TABLE productOption(
     productOptionId INTEGER,
+
+
+
+
+
     PRIMARY KEY (categoryId, productId, productOptionId)
 );
 
 
+
+-- CATEGORY AND PRODUCT CONNECTION
+-- left joing because all results have a category
+-- left join means only display products that have a matching catgeory id
+
 SELECT * FROM category
 LEFT JOIN product
 on category.categoryId = product.categoryId;
+
+SELECT * from product
+LEFT JOIN productOption
+on product.categoryId + product.productId = productOption.categoryId + product.productId;
