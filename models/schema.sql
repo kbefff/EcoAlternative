@@ -33,6 +33,7 @@ SELECT * FROM category
 LEFT JOIN product
 on category.categoryId = product.categoryId;
 
+-- PRODUCT AND PRODUCT OPTION CONNECTION
 SELECT * from product
 LEFT JOIN productOption
 on product.categoryId + product.productId = productOption.categoryId + product.productId;
