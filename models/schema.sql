@@ -7,11 +7,17 @@ CREATE TABLE category(
 );
 
 CREATE TABLE product(
-    categoryId    INTEGER,
+    categoryId INTEGER,
     productId INTEGER,
     product   VARCHAR(33),
     PRIMARY KEY (categoryId, productId)
 );
+
+CREATE TABLE productOption(
+    productOptionId INTEGER,
+    PRIMARY KEY (categoryId, productId, productOptionId)
+);
+
 
 SELECT * FROM category
 LEFT JOIN product
