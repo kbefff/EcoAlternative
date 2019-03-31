@@ -2,22 +2,22 @@ var express = require("express");
 
 var router = express.Router();
 
-// Import the model (category.js) to use its database functions.
+// Import the model (cat.js) to use its database functions.
 var category = require("../models/index.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-  category.all(function(data) {
+  cat.all(function(data) {
     var hbsObject = {
-      categoryegories: data
+      categories: data
     };
     console.log(hbsObject);
     res.render("index", hbsObject);
   });
 });
 
-router.post("/api/categoryegories", function(req, res) {
-  categoryegory.create([
+router.post("/api/categories", function(req, res) {
+  category.create([
     "name", "sleepy"
   ], [
     req.body.name, req.body.sleepy
@@ -27,7 +27,7 @@ router.post("/api/categoryegories", function(req, res) {
   });
 });
 
-router.put("/api/categoryegories/:id", function(req, res) {
+router.put("/api/categories/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
   console.log("condition", condition);
@@ -44,7 +44,7 @@ router.put("/api/categoryegories/:id", function(req, res) {
   });
 });
 
-router.delete("/api/categoryegories/:id", function(req, res) {
+router.delete("/api/categories/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
   category.delete(condition, function(result) {
