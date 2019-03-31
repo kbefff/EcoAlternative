@@ -7,7 +7,7 @@ var category = require("../models/index.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-  cat.all(function(data) {
+  category.all(function(data) {
     var hbsObject = {
       categories: data
     };
@@ -18,7 +18,7 @@ router.get("/", function(req, res) {
 
 router.post("/api/categories", function(req, res) {
   category.create([
-    TODO: // "name", "sleepy"
+   "name", "sleepy"
   ], [
     req.body.name, req.body.sleepy
   ], function(result) {
