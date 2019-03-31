@@ -3,7 +3,7 @@ CREATE DATABASE eco_alternative;
 USE eco_alternative;
 
 
-CREATE TABLE category(
+CREATE TABLE categories(
     categoryId INTEGER  NOT NULL PRIMARY KEY, 
     category   VARCHAR(26) NOT NULL
 );
@@ -31,9 +31,9 @@ CREATE TABLE product(
 -- left joing because all results have a category
 -- left join means only display products that have a matching catgeory id
 
-SELECT * FROM category
+SELECT * FROM categories
 LEFT JOIN product
-on category.categoryId = product.categoryId;
+on categories.categoryId = product.categoryId;
 
 -- PRODUCT AND PRODUCT OPTION CONNECTION
 -- SELECT * from product
