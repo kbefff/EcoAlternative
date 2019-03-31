@@ -18,7 +18,7 @@ router.get("/", function(req, res) {
 
 router.post("/api/categories", function(req, res) {
   category.create([
-    "name", "sleepy"
+    TODO: // "name", "sleepy"
   ], [
     req.body.name, req.body.sleepy
   ], function(result) {
