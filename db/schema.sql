@@ -1,5 +1,7 @@
 DROP DATABASE IF EXISTS eco_alternative;
 CREATE DATABASE eco_alternative;
+USE eco_alternative;
+
 
 CREATE TABLE category(
     categoryId INTEGER  NOT NULL PRIMARY KEY, 
@@ -13,15 +15,15 @@ CREATE TABLE product(
     PRIMARY KEY (categoryId, productId)
 );
 
-CREATE TABLE productOption(
-    productOptionId INTEGER,
+-- CREATE TABLE productOption(
+--     productOptionId INTEGER,
 
 
 
 
 
-    PRIMARY KEY (categoryId, productId, productOptionId)
-);
+--     PRIMARY KEY (categoryId, productId, productOptionId)
+-- );
 
 
 
@@ -34,6 +36,6 @@ LEFT JOIN product
 on category.categoryId = product.categoryId;
 
 -- PRODUCT AND PRODUCT OPTION CONNECTION
-SELECT * from product
-LEFT JOIN productOption
-on product.categoryId + product.productId = productOption.categoryId + product.productId;
+-- SELECT * from product
+-- LEFT JOIN productOption
+-- on product.categoryId + product.productId = productOption.categoryId + product.productId;
