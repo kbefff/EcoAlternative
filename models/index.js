@@ -3,27 +3,27 @@ var orm = require("../config/orm.js");
 
 var categoryModel = {
   all: function(cb) {
-    orm.all("categories", function(res) {
+    orm.all("category", function(res) {
       cb(res);
     });
   },
   // The variables cols and vals are arrays.
   create: function(cols, vals, cb) {
-    orm.create("categories", cols, vals, function(res) {
+    orm.create("category", cols, vals, function(res) {
       cb(res);
     });
   },
   update: function(objColVals, condition, cb) {
-    orm.update("categories", objColVals, condition, function(res) {
+    orm.update("category", objColVals, condition, function(res) {
       cb(res);
     });
   },
   delete: function(condition, cb) {
-    orm.delete("categories", condition, function(res) {
+    orm.delete("category", condition, function(res) {
       cb(res);
     });
   }
 };
 
 // Export the database functions for the controller (categoriesController.js).
-module.exports = category;
+module.exports = categoryModel;

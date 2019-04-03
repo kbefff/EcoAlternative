@@ -11,8 +11,8 @@ CREATE TABLE category(
 CREATE TABLE product(
    categoryId        INTEGER  NOT NULL
   ,product_generalId INTEGER  NOT NULL
-  ,product_general   VARCHAR(22) NOT NULL
-id PRIMARY KEY (categoryId, product_generalId)
+  ,product_general   VARCHAR(22) NOT NULL,
+PRIMARY KEY (categoryId, product_generalId)
 
 );
 
@@ -32,8 +32,8 @@ CREATE TABLE productOption(
   ,image                VARCHAR(211) NOT NULL
   ,external_link        VARCHAR(287) NOT NULL
   ,fun_fact             VARCHAR(678) NOT NULL
-  ,source               VARCHAR(274) NOT NULL
-    id PRIMARY KEY (categoryId, product_generalId , product_specificId)
+  ,source               VARCHAR(274) NOT NULL,
+  PRIMARY KEY (categoryId, product_generalId , product_specificId)
 
 );
 
@@ -41,9 +41,9 @@ CREATE TABLE productOption(
 -- CATEGORY AND PRODUCT CONNECTION
 -- left joing because all results have a category
 -- left join means only display products that have a matching catgeory id
-SELECT * FROM categories
+SELECT * FROM category
 LEFT JOIN product
-on categories.categoryId = product.categoryId;
+on category.categoryId = product.categoryId;
 
 -- PRODUCT AND PRODUCT OPTION CONNECTION
 SELECT * from product
