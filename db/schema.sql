@@ -37,26 +37,15 @@ CREATE TABLE productOption(
 
 );
 
--- CREATE TABLE productOption(
---     productOptionId INTEGER,
-
-
-
-
-
--- );
-
-
 
 -- CATEGORY AND PRODUCT CONNECTION
 -- left joing because all results have a category
 -- left join means only display products that have a matching catgeory id
-
 SELECT * FROM categories
 LEFT JOIN product
 on categories.categoryId = product.categoryId;
 
 -- PRODUCT AND PRODUCT OPTION CONNECTION
--- SELECT * from product
--- LEFT JOIN productOption
--- on product.categoryId + product.productId = productOption.categoryId + product.productId;
+SELECT * from product
+LEFT JOIN productOption
+on product.categoryId + product.product_generalId = productOption.categoryId + product.product_generalId;
