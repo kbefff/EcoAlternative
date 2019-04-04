@@ -14,14 +14,15 @@ module.exports = function (app) {
     }
     // res.render("index");
     // ==================== FROM CONTROLLER FOR NOW ==================
+    // get all values in the category table
     category.all(function (data) {
       var hbsObject = {
+        // 
         categories: data
       };
-      console.log("hi");
       res.render("index", hbsObject);
     });
-    // ==============================================
+    // ================================================================
 
     // res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
