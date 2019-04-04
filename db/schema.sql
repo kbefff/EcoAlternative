@@ -1,3 +1,5 @@
+
+--TODO: REMOVE DROP DATABASE LATER
 DROP DATABASE IF EXISTS eco_alternative;
 CREATE DATABASE eco_alternative;
 USE eco_alternative;
