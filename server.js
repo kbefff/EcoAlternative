@@ -7,7 +7,7 @@ var passport = require("./config/passport");
 
 var PORT = process.env.PORT || 8080;
 var db = require("./models_auth");
-
+require('dotenv').config();
 var app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
@@ -32,6 +32,7 @@ app.set("view engine", "handlebars");
 // Import routes and give the server access to them.
 var routes = require("./controllers/categoriesController.js");
 
+
 // Requiring our routes
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
@@ -39,8 +40,8 @@ require("./routes/api-routes.js")(app);
 app.use(routes);
 
 // Syncing our database and logging a message to the user upon success
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
+db.sequelize.sync().then(function () {
+  app.listen(PORT, function () {
     console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
   });
 });
