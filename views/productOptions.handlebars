@@ -1,0 +1,42 @@
+<!-- web view of nav -->
+<nav class="#8bc34a light-green" style="padding: 0px 20px;" role="navigation">
+  <div class="nav-wrapper container">
+    <div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">EcoAlternative</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#add">Add Product</a></li>
+          <li><a href="#categories">Categories</a></li>
+        </ul>
+
+    <!-- mobile view of nav -->
+      <ul class="sidenav" id="nav-mobile">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#add">Add Product</a></li>
+        <li><a href="#categories">Categories</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+  </div>
+</nav>
+
+
+<ul>
+    {{#each productOptions}}
+        <li>{{id}}</li>
+        <li>{{productOption_name }}</li>
+        <li>{{product_Id}}</li>
+        <li>{{ingredients}}</li>
+        <li>{{plastic_free}}</li>
+        <li>{{reusable}}</li>
+        <li>{{price}}</li>
+        <li>{{stylish}}</li>
+        <li>{{environmental_impact}}</li>
+        {{!-- <li>{{image}}</li> --}}
+        <li>{{external_link}}</li>
+        <li>{{fun_fact}}</li>
+        <li>{{source}}</li>
+    {{/each}}
+  </ul>
+
+
+
+
