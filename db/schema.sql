@@ -5,25 +5,26 @@ CREATE DATABASE eco_alternative;
 USE eco_alternative;
 
 CREATE TABLE category(
-   categoryId    INTEGER  NOT NULL PRIMARY KEY 
+   id    INTEGER  NOT NULL PRIMARY KEY 
   ,category_name VARCHAR(24)
 );
 
 
 CREATE TABLE product(
-   categoryId        INTEGER  NOT NULL
-  ,product_generalId INTEGER  NOT NULL
+   
+  id INTEGER AUTO INCREMENT NOT NULL 
   ,product_general   VARCHAR(22) NOT NULL,
-PRIMARY KEY (categoryId, product_generalId)
+  categoryId        INTEGER  NOT NULL
+-- PRIMARY KEY (categoryId, product_generalId)
 
 );
 
 CREATE TABLE productOption(
-   categoryId           INTEGER  NOT NULL
+  id   INTEGER  NOT NULL
+   ,categoryId           INTEGER  NOT NULL
   ,category_name        VARCHAR(24) NOT NULL
   ,product_generalId    INTEGER  NOT NULL
   ,product_general      VARCHAR(18) NOT NULL
-  ,product_specificId   INTEGER  NOT NULL
   ,product_specific     VARCHAR(56) NOT NULL
   ,ingredients          VARCHAR(5) NOT NULL
   ,plastic_free         VARCHAR(5) NOT NULL
@@ -35,7 +36,7 @@ CREATE TABLE productOption(
   ,external_link        VARCHAR(287) NOT NULL
   ,fun_fact             VARCHAR(678) NOT NULL
   ,source               VARCHAR(274) NOT NULL,
-  PRIMARY KEY (categoryId, product_generalId , product_specificId)
+  -- PRIMARY KEY (categoryId, product_generalId , product_specificId)
 
 );
 
@@ -43,11 +44,11 @@ CREATE TABLE productOption(
 -- CATEGORY AND PRODUCT CONNECTION
 -- left joing because all results have a category
 -- left join means only display products that have a matching catgeory id
-SELECT * FROM category
-LEFT JOIN product
-on category.categoryId = product.categoryId;
+-- SELECT * FROM category
+-- LEFT JOIN product
+-- on category.categoryId = product.categoryId;
 
 -- PRODUCT AND PRODUCT OPTION CONNECTION
-SELECT * from product
-LEFT JOIN productOption
-on product.categoryId + product.product_generalId = productOption.categoryId + product.product_generalId;
+-- SELECT * from product
+-- LEFT JOIN productOption
+-- on product.categoryId + product.product_generalId = productOption.categoryId + product.product_generalId;

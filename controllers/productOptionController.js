@@ -3,21 +3,24 @@ var express = require("express");
 var router = express.Router();
 
 // Import the model (cat.js) to use its database functions.
-var categoryModel = require("../models/productOption.js");
+var category = require("../models/category.js");
+var productOption = require("../models/productOption.js");
+
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-  categoryModel.all(function(data) {
-    var hbsObject = {
-      category: data
-    };
-    console.log(hbsObject);
-    res.render("index", hbsObject);
-  });
+  // 
+  // 
+  //       SEE HTML-ROUTES
+  // 
+  // 
 });
 
+
+
+
 router.post("/api/category/product/", function(req, res) {
-  categoryModel.create([
+  productOption.create([
    "name", "sleepy"
   ], [
     req.body.name, req.body.sleepy
@@ -32,7 +35,7 @@ router.put("/api/category/product/:productOption", function(req, res) {
 
   console.log("condition", condition);
 
-  categoryModel.update({
+  productOption.update({
     sleepy: req.body.sleepy
   }, condition, function(result) {
     if (result.changedRows == 0) {
@@ -48,7 +51,7 @@ router.put("/api/category/product/:productOption", function(req, res) {
 // router.delete("/api/category/product/:productOption", function(req, res) {
 //   var condition = "id = " + req.params.id;
 
-//   categoryModel.delete(condition, function(result) {
+//   productOption.delete(condition, function(result) {
 //     if (result.affectedRows == 0) {
 //       // If no rows were changed, then the ID must not exist, so 404
 //       return res.status(404).end();
