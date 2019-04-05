@@ -32,9 +32,9 @@ module.exports = function (app) {
   // go to specific clicked on product
   app.get("/product", function (req, res) {
     // // If the user already has an account send them to the members page
-    // if (req.user) {
-    //   res.render("index");
-    // }
+    if (req.user) {
+      res.render("index");
+    }
 
     // get all values in the product table
     product.all(function (data) {
