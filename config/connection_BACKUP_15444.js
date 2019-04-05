@@ -1,6 +1,16 @@
 // Pull in required dependencies
 var mysql = require('mysql');
 
+<<<<<<< HEAD
+
+var connection = mysql.createConnection({
+  host: "localhost",
+  port: 3306,
+  user: "root",
+  password: "PoopaSQL!",
+  database: "eco_alternative"
+});
+=======
 // Create the MySQL connection object
 var connection;
 
@@ -17,6 +27,7 @@ if (process.env.JAWSDB_URL) {
     database: 'eco_alternative'
   })
 };
+>>>>>>> master
 
 // Make the connection to MySQL
 connection.connect(function (err) {
