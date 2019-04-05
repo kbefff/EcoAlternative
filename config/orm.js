@@ -87,7 +87,17 @@ var orm = {
 
       cb(result);
     });
-  }
+  },
+
+  // find: function(tableInput, id, cb){
+  //   var queryString = "SELECT * FROM " + tableInput;
+    
+  //   queryString += "WHERE";
+  //   queryString +=  "?" ;
+  //   console.log(queryString);
+
+
+  // }
   // delete: function(table, condition, cb) {
   //   var queryString = "DELETE FROM " + table;
   //   queryString += " WHERE ";
