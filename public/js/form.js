@@ -13,10 +13,10 @@ $(document).ready(function () {
             price: $(`#price`).val().trim(),
             category_name: $(`#category_name option:selected`).val(),
             product_general: $(`#product_general option:selected`).val(),
-            ingredients: $(`#ingredients option:selected`).val(),
-            plastic_free: $(`#plastic_free option:selected`).val(),
-            reusable: $(`#reusable option:selected`).val(),
-            stylish: $(`#stylish option:selected`).val(),
+            ingredients: $(`#ingredients option:selected`).text(),
+            plastic_free: $(`#plastic_free option:selected`).text(),
+            reusable: $(`#reusable option:selected`).text(),
+            stylish: $(`#stylish option:selected`).text(),
             fun_fact: $(`#fun_fact`).val(),
             environmental_impact: $(`#environmental_impact`).val()
         };
