@@ -20,9 +20,11 @@
 
 
 <ul>
-    {{#each productOptions}}
+    {{#each products}}
         <li>{{id}}</li>
-        <li>{{productOption_name }}</li>
+        <li>{{product_name}}</li>
+
+        <li>{{product.ingredients}}</li>
         <li>{{product_Id}}</li>
         <li>{{ingredients}}</li>
         <li>{{plastic_free}}</li>
@@ -30,10 +32,12 @@
         <li>{{price}}</li>
         <li>{{stylish}}</li>
         <li>{{environmental_impact}}</li>
-        {{!-- <li>{{image}}</li> --}}
         <li>{{external_link}}</li>
         <li>{{fun_fact}}</li>
         <li>{{source}}</li>
+
+        {{!-- <li>{{image}}</li> --}}
+
     {{/each}}
   </ul>
 
