@@ -11,6 +11,7 @@ DROP TABLE IF EXISTS productOption;
 CREATE TABLE category(
    id            INTEGER  NOT NULL PRIMARY KEY AUTO_INCREMENT
   ,category_name VARCHAR(24) NOT NULL
+  ,icon VARCHAR(24) NOT NULL
 );
 
 
