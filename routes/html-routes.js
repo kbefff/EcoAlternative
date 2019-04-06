@@ -12,7 +12,7 @@ var connection = require("../config/connection.js");
 module.exports = function (app) {
 
   app.get("/", function (req, res) {
-    // If the user already has an account send them to the members page
+
     if (req.user) {
       res.render("index");
     }
@@ -23,10 +23,11 @@ module.exports = function (app) {
         // 
         categories: data
       };
+      console.log(hbsObject);
       res.render("index", hbsObject);
     });
 
-    // res.sendFile(path.join(__dirname, "../public/signup.html"));
+
   });
 
   // go to specific clicked on product
@@ -56,7 +57,7 @@ module.exports = function (app) {
     }
 
     // TODO: refactor for orm
-    connection.query("SELECT * FROM productOption WHERE id = ?", [req.params.id], function (err, data) {
+    connection.query("SELECT * FROM productOption WHERE product_id = ?", [req.params.id], function (err, data) {
       if (err) return res.status(500).end();
       var hbsObject = {
         products: data
@@ -65,14 +66,30 @@ module.exports = function (app) {
     });
   });
 
+  app.get("/category/:id", function (req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.render("index");
+    }
+
+    // TODO: refactor for orm
+    connection.query("SELECT * FROM product WHERE categoryI_id = ?", [req.params.id], function (err, data) {
+      if (err) return res.status(500).end();
+      var hbsObject = {
+        products: data
+      };
+      res.render("product", hbsObject);
+    });
+  });
 
 
 
-  
+
+
   app.get("/login", function (req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/members");
+      res.redirect("/");
     }
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
