@@ -89,6 +89,8 @@ var orm = {
     });
   },
 
+
+  // TODO: this is for eventually handling the "connection.query("SELECT * FROM productOption WHERE id = ?"," on the hml-routes page
   // find: function(tableInput, id, cb){
   //   var queryString = "SELECT * FROM " + tableInput;
     

@@ -5,7 +5,11 @@ module.exports = {
 
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": process.env.DB_PW,
+=======
+    "password": "di77on&&",
+>>>>>>> master
     "database": "users",
     "host": "127.0.0.1",
     "dialect": "mysql"
