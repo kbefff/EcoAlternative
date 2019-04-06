@@ -15,7 +15,7 @@ module.exports = function (app) {
 
     if (req.user) {
       res.render("index");
-    }
+    };
 
     // get all values in the category table
     category.all(function (data) {
@@ -33,9 +33,9 @@ module.exports = function (app) {
   // go to specific clicked on product
   app.get("/product", function (req, res) {
     // // If the user already has an account send them to the members page
-    // if (req.user) {
-    //   res.render("index");
-    // }
+    if (req.user) {
+      res.render("index");
+    };
 
     // get all values in the product table
     product.all(function (data) {
@@ -54,7 +54,7 @@ module.exports = function (app) {
     // If the user already has an account send them to the members page
     if (req.user) {
       res.render("index");
-    }
+    };
 
     // TODO: refactor for orm
     connection.query("SELECT * FROM productOption WHERE product_id = ?", [req.params.id], function (err, data) {
@@ -89,8 +89,8 @@ module.exports = function (app) {
   app.get("/login", function (req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/");
-    }
+      res.redirect("/members");
+    };
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 
