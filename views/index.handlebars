@@ -1,27 +1,65 @@
 <!-- web view of nav -->
 <nav class="#8bc34a light-green" style="padding: 0px 20px;" role="navigation">
   <div class="nav-wrapper container">
-    <div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">EcoAlternative</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#add">Add Product</a></li>
-        <li><a href="#categories">Categories</a></li>
-      </ul>
+      <i style="padding: 0px 20px;" class="fas fa-leaf"></i>
+      <a id="logo-container" href="#" class="brand-logo">eco alternative</a>
+        <ul class="right hide-on-med-and-down nav-items">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#add">Add Product</a></li>
+        </ul>
 
-      <!-- mobile view of nav -->
+    <!-- mobile view of nav -->
       <ul class="sidenav" id="nav-mobile">
-        <li><a href="#home">Home</a></li>
-        <li><a href="../public/form.html">Add Product</a></li>
+        <li><a href="#about">About Us</a></li>
         <li><a href="#categories">Categories</a></li>
+        <li><a href="#add">Add Product</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
+  </div>
 </nav>
+
+<div class="container center categories">
+  <h4>Categories</h4>
+</div>
+
+<div class="container categories">
+  <div class="row center">
+    <div class="col s4"><h6>beauty & personal care</h6><i class="fas fa-spa fa-3x"></i></div>
+    <div class="col s4"><h6>bed and bedding</h6><i class="fas fa-bed fa-3x"></i></div>
+    <div class="col s4"><h6>bath & space</h6><i class="fas fa-shower fa-3x"></i></div>
+  </div>
+  <br>
+  <div class="row center">
+    <div class="col s4"><h6>cleaning</h6><img src="/assets/img/cleaning.jpg" alt="cleaning_supplies" height="45" width="45"></div>
+    <div class="col s4"><h6>baby & kids</h6><i class="fas fa-baby-carriage fa-3x"></i></div>
+    <div class="col s4"><h6>home improvement</h6><i class="fas fa-hammer fa-3x"></i></div>
+  </div>
+  <br>
+  <div class="row center">
+    <div class="col s4"><h6>kitchen & storage</h6><i class="fas fa-archive fa-3x"></i></div>
+    <div class="col s4"><h6>yard & garden</h6><i class="fas fa-seedling fa-3x"></i></div>
+    <div class="col s4"><h6>pet supplies</h6><i class="fas fa-paw fa-3x"></i></div>
+  </div>
+  <br>
+  <div class="row center">
+    <div class="col s6"><h6>travel & recreation</h6><i class="fas fa-glass-cheers fa-3x"></i></div>
+    <div class="col s6"><h6>electronics</h6><i class="fas fa-tv fa-3x"></i></div>
+  </div>
+</div>
 
 
 
 {{#each categories}}
-<a href="/category/{{id}}">{{category_name}}</a>
-
-
+  {{categoryId}}
+  {{category_name}}
 {{/each}}
+
+
+
+
+
+
+
+
+

@@ -1,4 +1,52 @@
-li {
+/* GLOBAL STYLES */
+
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  overflow-x: hidden; /* keep all of the content within the browser window */ 
+  color: #494848;
+}
+
+h4 {
+  font-size: 2.7rem;
+  text-shadow: .1rem 0rem .1rem rgb(231, 227, 227);
+  font-family: 'Love Ya Like A Sister', cursive;
+  padding-top: 1.2rem;
+  padding-bottom: 1.6rem;
+  color: #8bc34a;
+}
+
+/* LOGO */
+.brand-logo {
+  font-family: 'Love Ya Like A Sister', cursive;
+}
+
+
+/* NAV */
+.nav {
+  padding-bottom: 2rem
+}
+
+/* CATEGORIES */
+.categories h6 {
+  font-size: 1.1rem;
+  text-shadow: .1rem 0rem .1rem rgb(231, 227, 227);
+  padding-bottom: .5rem
+}
+
+.categories h4 {
+  font-size: 2.7rem;
+  text-shadow: .1rem 0rem .1rem rgb(231, 227, 227);
+  font-family: 'Love Ya Like A Sister', cursive;
+  padding-top: 1.2rem;
+  padding-bottom: 1.6rem;
+  color: #8bc34a;
+}
+
+
+
+/* commenting out the below because I do not know where it come from? Should delete if not needed. */
+
+/* li {
   padding: 5px;
   margin: 5px;
   background: #faebd7;
@@ -16,4 +64,4 @@ li {
 
 .form-group {
   margin-bottom: 5px;
-}
+} */
