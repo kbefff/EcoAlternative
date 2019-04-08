@@ -39,7 +39,8 @@ module.exports = function (app) {
       res.render("productOption", hbsObject);
     });
   });
-
+  
+  //Dynamic routing to return our categories to the page
   app.get("/category/:id", function (req, res) {
 
     // TODO: refactor for orm
@@ -52,10 +53,7 @@ module.exports = function (app) {
     });
   });
 
-
-
-
-
+  //Route to render our login page
   app.get("/login", function (req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
@@ -63,18 +61,19 @@ module.exports = function (app) {
     };
     res.render("login");
   });
-
+  
+  //Route to render the sign up page
   app.get("/signup", function (req, res) {
 
     res.render("signup");
   });
-
+  //route to render the create new product page
   app.get("/addproduct", function (req, res) {
 
     res.render("form");
   });
 
-
+  //Route to render our abut us page
   app.get("/aboutus", function (req, res) {
 
     res.render("aboutus")
