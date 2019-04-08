@@ -3,3 +3,29 @@
 <a href="/product/{{id}}">{{product_name}}</a>
 
 {{/each}}
+
+  
+
+
+  <label>Browser Select</label>
+  <select class="browser-default">
+    <option value="" disabled selected>Choose your option</option>
+    {{#each products}}
+         <option value="1"><a href="/product/{{id}}">{{product_name}}</a></option>
+    {{/each}}
+  </select>
+
+
+
+  <li>{{> productOption/xProductOption}}</li>
+            
+
+
+
+
+
+
+
+
+
+   <script type="text/javascript" src="./js/product.js"></script>         
