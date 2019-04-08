@@ -17,6 +17,7 @@
     "express": "^4.16.4",
     "express-handlebars": "^3.0.2",
     "express-session": "^1.15.6",
+    "jquery-serializejson": "^2.9.0",
     "mysql": "^2.16.0",
     "mysql2": "^1.6.5",
     "nodemon": "^1.18.10",

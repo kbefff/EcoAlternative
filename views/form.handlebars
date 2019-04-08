@@ -6,167 +6,166 @@
                     <h1>Add Your Product</h1>
                     <div class="divider"></div>
 
-                    <form class="login" action="/api/newproduct" method="POST">
-
-                        <div class="input-field col s6">
-                            <h5>Product Name (Required)</h5>
-                            <input type="text" class="validate" placeholder="Product Name Here" id="product_specific">
-                        </div>
-
-                        <div class="input-field col s6">
-                            <h5>Link to Photo Image (Required)</h5>
-                            <input type="text" class="validate" placeholder="Photo Link Here" id="image">
-                        </div>
-
-                        <div class="input-field col s6">
-                            <h5>Purchase Link (Required)</h5>
-                            <input type="text" class="validate" placeholder="Purchase Link Here" id="external_link">
-                        </div>
-
-                        <div class="input-field col s6">
-                            <h5>Blog Link (Required)</h5>
-                            <input type="text" class="validate" placeholder="Blog Link Here" id="source">
-                        </div>
-
-                        <div class="input-field col s12">
-                            <h5>Price (Required)</h5>
-                            <input type="text" class="validate" placeholder="Price" id="price">
-                        </div>
 
 
+                    <div class="form-group">
+                        <h5>Product Name (Required)</h5>
+                        <input class="form-control" type="text" placeholder="Product Name Here" id="productOption_name">
+                    </div>
 
-                        <div class="input-field col s12">
-                            <h5>Product Category</h5>
-                            <select id="category_name">
-                                <option disabled selected>Choose your option</option>
-                                <option value="1">Beauty and Personal Care</option>
-                                <option value="2">Bed and Bedding</option>
-                                <option value="3">Bath and Spa</option>
-                                <option value="4">Cleaning</option>
-                                <option value="5">Baby and Kids</option>
-                                <option value="6">Home Improvement</option>
-                                <option value="7">Kitchen and Storage</option>
-                                <option value="8">Yard and Garden</option>
-                                <option value="9">Pet Supplies</option>
-                                <option value="10">Travel and Recreation</option>
-                                <option value="11">Electronics</option>
+                    <div class="form-group">
+                        <h5>Link to Photo Image (Required)</h5>
+                        <input class="form-control" type="text" placeholder="Photo Link Here" id="image">
+                    </div>
 
-                            </select>
-                        </div>
+                    <div class="form-group">
+                        <h5>Purchase Link (Required)</h5>
+                        <input class="form-control" type="text" placeholder="Purchase Link Here" id="external_link">
+                    </div>
 
-                        <div class="input-field col s12">
-                            <h5>Product Type</h5>
-                            <select id="product_general">
-                                <option value="" disabled selected>Choose your option</option>
-                                <option value="1">Moisturizer</option>
-                                <option value="2">Facial Oil</option>
-                                <option value="3">Shampoo</option>
-                                <option value="1">Sheets</option>
-                                <option value="2">Mattress</option>
-                                <option value="3">Comforter</option>
-                                <option value="1">Paper Products</option>
-                                <option value="2">Towels</option>
-                                <option value="3">Bath Essentials</option>
-                                <option value="4">Dental Hygiene</option>
-                                <option value="1">Chemicals</option>
-                                <option value="2">Cleaning Supplies</option>
-                                <option value="1">Bath & Potty</option>
-                                <option value="2">Nursing</option>
-                                <option value="3">Bedding & Décor</option>
-                                <option value="4">Feeding</option>
-                                <option value="1">Pest Control</option>
-                                <option value="2">Heating & Cooling</option>
-                                <option value="3">Emergency Supplies</option>
-                                <option value="1">Kitchen</option>
-                                <option value="2">Storage</option>
-                                <option value="1">Garden</option>
-                                <option value="2">Yard</option>
-                                <option value="1">Bedding</option>
-                                <option value="2">Bathing</option>
-                                <option value="3">Collar/Harness</option>
-                                <option value="1">Hygiene</option>
-                                <option value="2">Kitchen</option>
-                                <option value="3">Fitness</option>
-                                <option value="1">Solar</option>
-                                <option value="2">Home</option>
+                    <div class="form-group">
+                        <h5>Blog Link (Required)</h5>
+                        <input class="form-control" type="text" placeholder="Blog Link Here" id="source">
+                    </div>
 
-
-                            </select>
-                        </div>
-
-                        <div class="input-field col s12">
-
-                            <h5>Environmentally Friendly</h5>
-                            <select id="ingredients">
-                                <option value="" disabled selected>Choose your option</option>
-                                <option value="1">TRUE</option>
-                                <option value="2">FALSE</option>
-
-                            </select>
-                        </div>
-
-                        <div class="input-field col s12">
-
-                            <h5>Plastic Free</h5>
-                            <select id="plastic_free">
-                                <option value="" disabled selected>Choose your option</option>
-                                <option value="1">TRUE</option>
-                                <option value="2">FALSE</option>
-
-                            </select>
-                        </div>
-
-                        <div class="input-field col s12">
-
-                            <h5>Reusable</h5>
-                            <select id="reusable">
-                                <option value="" disabled selected>Choose your option</option>
-                                <option value="1">TRUE</option>
-                                <option value="2">FALSE</option>
-
-                            </select>
-                        </div>
-
-                        <div class="input-field col s12">
-
-                            <h5>Stylish</h5>
-                            <select id="stylish">
-                                <option value="" disabled selected>Choose your option</option>
-                                <option value="1">TRUE</option>
-                                <option value="2">FALSE</option>
-
-                            </select>
-                        </div>
+                    <div class="form-group">
+                        <h5>Price (Required)</h5>
+                        <input class="form-control" type="text" placeholder="Price" id="price">
+                    </div>
 
 
 
-                        <div class="input-field col s12">
-                            <h5>Fun Facts</h5>
-                            <input type="text" class="validate" placeholder="Type Here" id="fun_fact">
-                        </div>
+                    <div class="form-group">
+                        <h5>Product Category</h5>
+                        <select id="product_Id">
+                            <option disabled selected>Choose your option</option>
+                            <option value="1">Beauty and Personal Care</option>
+                            <option value="2">Bed and Bedding</option>
+                            <option value="3">Bath and Spa</option>
+                            <option value="4">Cleaning</option>
+                            <option value="5">Baby and Kids</option>
+                            <option value="6">Home Improvement</option>
+                            <option value="7">Kitchen and Storage</option>
+                            <option value="8">Yard and Garden</option>
+                            <option value="9">Pet Supplies</option>
+                            <option value="10">Travel and Recreation</option>
+                            <option value="11">Electronics</option>
 
-                        <div class="input-field col s12">
-                            <h5>Environmental Impact</h5>
-                            <input type="text" class="validate" placeholder="Type Here" id="environmental_impact">
-                        </div>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <h5>Product Type</h5>
+                        <select id="product_name">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="Moisturizer">Moisturizer</option>
+                            <option value="Facial Oil">Facial Oil</option>
+                            <option value="Shampoo">Shampoo</option>
+                            <option value="Sheets">Sheets</option>
+                            <option value="Mattress">Mattress</option>
+                            <option value="Comforter">Comforter</option>
+                            <option value="Paper Products">Paper Products</option>
+                            <option value="Towels">Towels</option>
+                            <option value="Bath Essentials">Bath Essentials</option>
+                            <option value="Dental Hygien">Dental Hygiene</option>
+                            <option value="Chemicals">Chemicals</option>
+                            <option value="Cleaning Supplies">Cleaning Supplies</option>
+                            <option value="Bath & Potty">Bath & Potty</option>
+                            <option value="Nursing">Nursing</option>
+                            <option value="Bedding">Bedding & Décor</option>
+                            <option value="Feeding">Feeding</option>
+                            <option value="Pest Control">Pest Control</option>
+                            <option value="Heating & Cooling">Heating & Cooling</option>
+                            <option value="Emergency Supplies">Emergency Supplies</option>
+                            <option value="Kitchen">Kitchen</option>
+                            <option value="Storage">Storage</option>
+                            <option value="Garden">Garden</option>
+                            <option value="Yard">Yard</option>
+                            <option value="Bedding">Bedding</option>
+                            <option value="Bathing">Bathing</option>
+                            <option value="Collar">Collar/Harness</option>
+                            <option value="Hygiene">Hygiene</option>
+                            <option value="Kitchen">Kitchen</option>
+                            <option value="Fitness">Fitness</option>
+                            <option value="Solar">Solar</option>
+                            <option value="Home">Home</option>
+
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+
+                        <h5>Environmentally Friendly</h5>
+                        <select id="ingredients">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="TRUE">TRUE</option>
+                            <option value="FALSE">FALSE</option>
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+
+                        <h5>Plastic Free</h5>
+                        <select id="plastic_free">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="TRUE">TRUE</option>
+                            <option value="FALSE">FALSE</option>
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+
+                        <h5>Reusable</h5>
+                        <select id="reusable">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="TRUE">TRUE</option>
+                            <option value="FALSE">FALSE</option>
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+
+                        <h5>Stylish</h5>
+                        <select id="stylish">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="TRUE">TRUE</option>
+                            <option value="FALSE">FALSE</option>
+
+                        </select>
+                    </div>
 
 
 
-                        <!-- Survey Submit Button -->
-                        <div>
-                            <button class="btn waves-effect waves-light" type="submit" name="action"
-                                id="submitButton">Create Product
+                    <div class="form-group">
+                        <h5>Fun Facts</h5>
+                        <input class="form-control" type="text" placeholder="Type Here" id="fun_fact">
+                    </div>
 
-                            </button>
-                        </div>
+                    <div class="form-group">
+                        <h5>Environmental Impact</h5>
+                        <input class="form-control" type="text" placeholder="Type Here" id="environmental_impact">
+                    </div>
 
-                    </form>
+
+
+
+                    <div>
+                        <button class="btn waves-effect waves-light" type="submit" name="action"
+                            id="submitButton">Create Product
+
+                        </button>
+                    </div>
+
+
                 </div>
             </div>
         </div>
     </div>
 </main>
-
 
 
 
