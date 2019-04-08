@@ -11,31 +11,9 @@ var connection = require("../config/connection.js");
 
 module.exports = function (app) {
 
-  app.get("/", function (req, res) {
-
-    if (req.user) {
-      res.render("index");
-    };
-
-    // get all values in the category table
-    category.all(function (data) {
-      var hbsObject = {
-        // 
-        categories: data
-      };
-      console.log(hbsObject);
-      res.render("index", hbsObject);
-    });
-
-
-  });
-
   // go to specific clicked on product
   app.get("/product", function (req, res) {
-    // // If the user already has an account send them to the members page
-    if (req.user) {
-      res.render("index");
-    };
+
 
     // get all values in the product table
     product.all(function (data) {
@@ -51,10 +29,6 @@ module.exports = function (app) {
   // when user clicks on any element from product table, trigger ajax to get /product/:id then we will see productOptions.all
   // show the products on the product page
   app.get("/product/:id", function (req, res) {
-    // If the user already has an account send them to the members page
-    if (req.user) {
-      res.render("index");
-    };
 
     // TODO: refactor for orm
     connection.query("SELECT * FROM productOption WHERE product_id = ?", [req.params.id], function (err, data) {
@@ -67,10 +41,6 @@ module.exports = function (app) {
   });
 
   app.get("/category/:id", function (req, res) {
-    // If the user already has an account send them to the members page
-    if (req.user) {
-      res.render("index");
-    }
 
     // TODO: refactor for orm
     connection.query("SELECT * FROM product WHERE categoryI_id = ?", [req.params.id], function (err, data) {
@@ -94,11 +64,35 @@ module.exports = function (app) {
     res.render("login");
   });
 
+  app.get("/signup", function (req, res) {
+
+    res.render("signup");
+  });
+
+  app.get("/addproduct", function (req, res) {
+
+    res.render("form");
+  });
+
+
+  app.get("/aboutus", function (req, res) {
+
+    res.render("aboutus")
+  })
+
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be 
   //redirected to the signup page
-  app.get("/members", isAuthenticated, function (req, res) {
-    res.render("index");
+  app.get("/", function (req, res) {
+    // get all values in the category table
+    category.all(function (data) {
+      var hbsObject = {
+        // 
+        categories: data
+      };
+      console.log(hbsObject);
+      res.render("index", hbsObject);
+    });
   });
 };
