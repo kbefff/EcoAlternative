@@ -1,8 +1,6 @@
 $(document).ready(function () {
-    $('select').change(function () {
-
-        alert("works");
-
+    $("#dropdown_change").change(function () {
+        alert("hi");
     });
 });
 
