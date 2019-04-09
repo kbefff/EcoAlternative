@@ -1,14 +1,15 @@
-{{#each products}}
+{{!-- {{#each products}}
 
 <a href="/product/{{id}}">{{product_name}}</a>
 
-{{/each}}
+{{/each}} --}}
 
   
+   <script type="text/javascript" src="/js/product.js"></script>         
 
 
   <label>Browser Select</label>
-  <select onchange="myFunction()" class="browser-default">
+  <select id="#dropdown_change" class="browser-default">
     <option value="" disabled selected>Choose your option</option>
     {{#each products}}
          <option value="1"><a href="/product/{{id}}">{{product_name}}</a></option>
@@ -41,5 +42,3 @@
 
 
 
-
-   <script type="text/javascript" src="./js/product.js"></script>         
