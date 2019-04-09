@@ -34,16 +34,17 @@ module.exports = function (app) {
     connection.query("SELECT * FROM productOption WHERE product_id = ?", [req.params.id], function (err, data) {
       if (err) return res.status(500).end();
       var hbsObject = {
-        products: data
+        productOptions: data
       };
       res.render("productOption", hbsObject);
     });
   });
-
+  
+  //Dynamic routing to return our categories to the page
   app.get("/category/:id", function (req, res) {
 
     // TODO: refactor for orm
-    connection.query("SELECT * FROM product WHERE categoryI_id = ?", [req.params.id], function (err, data) {
+    connection.query("SELECT * FROM product WHERE category_id = ?", [req.params.id], function (err, data) {
       if (err) return res.status(500).end();
       var hbsObject = {
         products: data
@@ -52,10 +53,7 @@ module.exports = function (app) {
     });
   });
 
-
-
-
-
+  //Route to render our login page
   app.get("/login", function (req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
@@ -63,18 +61,19 @@ module.exports = function (app) {
     };
     res.render("login");
   });
-
+  
+  //Route to render the sign up page
   app.get("/signup", function (req, res) {
 
     res.render("signup");
   });
-
+  //route to render the create new product page
   app.get("/addproduct", function (req, res) {
 
     res.render("form");
   });
 
-
+  //Route to render our abut us page
   app.get("/aboutus", function (req, res) {
 
     res.render("aboutus")

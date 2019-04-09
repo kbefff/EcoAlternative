@@ -8,7 +8,7 @@ var productOption = require("../models/productOption.js");
 
 
 // Create all our routes and set up logic within those routes where required.
-router.get("/", function(req, res) {
+router.get("/", function (req, res) {
   // 
   // 
   //       SEE HTML-ROUTES
@@ -19,25 +19,26 @@ router.get("/", function(req, res) {
 
 
 
-router.post("/api/category/product/", function(req, res) {
+router.post("/api/newproduct", function (req, res) {
   productOption.create([
-   "name", "sleepy"
+    "productOption_name", "image", "external_link", "source", "price", "product_Id", "product_name", "ingredients", "plastic_free", "reusable", "stylish", "fun_fact", "environmental_impact"
   ], [
-    req.body.name, req.body.sleepy
-  ], function(result) {
+    req.body.productOption_name, req.body.image, req.body.external_link, req.body.source, req.body.price, req.body.product_Id, req.body.product_name, req.body.ingredients, req.body.plastic_free, req.body.reusable, req.body.stylish, req.body.fun_fact, req.body.environmental_impact
+  ], function (data) {
+    console.log(data)
     // Send back the ID of the new quote
-    res.json({ id: result.insertId });
+    res.redirect("/");
   });
 });
 
-router.put("/api/category/product/:productOption", function(req, res) {
+router.put("/api/category/product/:productOption", function (req, res) {
   var condition = "id = " + req.params.id;
 
   console.log("condition", condition);
 
   productOption.update({
     sleepy: req.body.sleepy
-  }, condition, function(result) {
+  }, condition, function (result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
