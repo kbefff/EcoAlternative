@@ -2,7 +2,7 @@
 DROP DATABASE IF EXISTS eco_alternative;
 CREATE DATABASE eco_alternative;
 USE eco_alternative;
--- DROP TABLE IF EXISTS category;
+-DROP TABLE IF EXISTS category;
 -- DROP TABLE IF EXISTS product;
 -- DROP TABLE IF EXISTS productOption;
 
@@ -10,7 +10,7 @@ USE eco_alternative;
 CREATE TABLE category(
    id            INTEGER  NOT NULL PRIMARY KEY  AUTO_INCREMENT
   ,category_name VARCHAR(24)
-  ,icon          VARCHAR(47)
+  ,icon          VARCHAR(500)
 );
 
 
