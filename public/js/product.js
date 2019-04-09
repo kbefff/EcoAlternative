@@ -1,5 +1,13 @@
+$(document).ready(function () {
+    $('select').change(function () {
 
-//   $(document).ready(function(){
-//     $('select').formSelect();
-//   });
-      
+        alert("works");
+
+    });
+});
+
+
+
+
+//   var instance = M.FormSelect.getInstance(elem);
+//   instance.getSelectedValues();

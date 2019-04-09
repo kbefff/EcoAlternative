@@ -1,6 +1,8 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models_auth");
 var passport = require("../config/passport");
+var connection = require("../config/connection.js");
+
 //
 module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -54,4 +56,20 @@ module.exports = function (app) {
       });
     }
   });
+
+
+
+  
+  app.get("/api/product/:id", function (req, res) {
+
+    // TODO: refactor for orm
+    connection.query("SELECT * FROM productOption WHERE product_id = ?", [req.params.id], function (err, data) {
+      if (err) return res.status(500).end();
+      var hbsObject = {
+        productOptions: data
+      };
+      res.json(hbsObject);
+    });
+  });
+
 };

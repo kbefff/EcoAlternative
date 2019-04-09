@@ -9,7 +9,7 @@ body {
 h4 {
   font-size: 2.7rem;
   text-shadow: .1rem 0rem .1rem rgb(231, 227, 227);
-  font-family: 'Love Ya Like A Sister', cursive;
+  /* font-family: 'Love Ya Like A Sister', cursive; */
   padding-top: 1.2rem;
   padding-bottom: 1.6rem;
   color: #8bc34a;
@@ -17,7 +17,7 @@ h4 {
 
 /* LOGO */
 .brand-logo {
-  font-family: 'Love Ya Like A Sister', cursive;
+  /* font-family: 'Love Ya Like A Sister', cursive; */
 }
 
 
@@ -36,7 +36,7 @@ h4 {
 .categories h4 {
   font-size: 2.7rem;
   text-shadow: .1rem 0rem .1rem rgb(231, 227, 227);
-  font-family: 'Love Ya Like A Sister', cursive;
+  /* font-family: 'Love Ya Like A Sister', cursive; */
   padding-top: 1.2rem;
   padding-bottom: 1.6rem;
   color: #8bc34a;
