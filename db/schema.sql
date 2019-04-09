@@ -1,11 +1,10 @@
 
---TODO: REMOVE DROP DATABASE LATER
 DROP DATABASE IF EXISTS eco_alternative;
 CREATE DATABASE eco_alternative;
 USE eco_alternative;
-DROP TABLE IF EXISTS category;
-DROP TABLE IF EXISTS product;
-DROP TABLE IF EXISTS productOption;
+-- DROP TABLE IF EXISTS category;
+-- DROP TABLE IF EXISTS product;
+-- DROP TABLE IF EXISTS productOption;
 
 
 CREATE TABLE category(

@@ -3,3 +3,43 @@
 <a href="/product/{{id}}">{{product_name}}</a>
 
 {{/each}}
+
+  
+
+
+  <label>Browser Select</label>
+  <select onchange="myFunction()" class="browser-default">
+    <option value="" disabled selected>Choose your option</option>
+    {{#each products}}
+         <option value="1"><a href="/product/{{id}}">{{product_name}}</a></option>
+    {{/each}}
+  </select>
+
+
+ {{!-- <div class="input-field col s12">
+    <select>
+      <option value="" disabled selected>Choose your option</option>
+     {{#each products}}
+         <option value="1"><a href="/product/{{id}}">{{product_name}}</a></option>
+    {{/each}}
+    </select>
+    <label>Materialize Select</label>
+  </div>
+ --}}
+
+
+
+  <li>{{> productOption/xproductOption}}</li>
+
+
+            
+
+
+
+
+
+
+
+
+
+   <script type="text/javascript" src="./js/product.js"></script>         

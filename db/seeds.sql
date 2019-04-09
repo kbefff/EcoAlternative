@@ -2,27 +2,27 @@
 INSERT INTO category
     (id,category_name,icon)
 VALUES
-    (1, 'beatuy_and_personal_care', '"fas fa-bath"')
+    (1, 'Beauty and Personal Care', '"fas fa-bath"')
 ,
-    (2, 'bed_and_bedding', '"fas fa-bath"')
+    (2, 'Bed and Bedding', '"fas fa-bath"')
 ,
-    (3, 'bath_and_spa', '"fas fa-bath"')
+    (3, 'Bath and Spa', '"fas fa-bath"')
 ,
-    (4, 'cleaning', '"fas fa-bath"')
+    (4, 'Cleaning', '"fas fa-bath"')
 ,
-    (5, 'baby_and_kids', '"fas fa-bath"')
+    (5, 'Baby and Kids', '"fas fa-bath"')
 ,
-    (6, 'home_improvement', '"fas fa-bath"')
+    (6, 'Home Improvement', '"fas fa-bath"')
 ,
-    (7, 'kitchen_and_storage', '"fas fa-bath"')
+    (7, 'Kitchen and Storage', '"fas fa-bath"')
 ,
-    (8, 'yard_and_garden','"fas fa-bath"')
+    (8, 'Yard and Garden','"fas fa-bath"')
 ,
-    (9, 'pet_supplies','"fas fa-bath"')
+    (9, 'Pet Supplies','"fas fa-bath"')
 ,
-    (10, 'travel_and_recreation','"fas fa-bath"')
+    (10, 'On-The-Go','"fas fa-bath"')
 ,
-    (11, 'electronics','"fas fa-bath"');
+    (11, 'Electronics','"fas fa-bath"');
 
 
 -- PRODUCTS

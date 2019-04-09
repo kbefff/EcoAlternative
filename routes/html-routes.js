@@ -34,7 +34,7 @@ module.exports = function (app) {
     connection.query("SELECT * FROM productOption WHERE product_id = ?", [req.params.id], function (err, data) {
       if (err) return res.status(500).end();
       var hbsObject = {
-        products: data
+        productOptions: data
       };
       res.render("productOption", hbsObject);
     });
