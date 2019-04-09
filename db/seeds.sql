@@ -1,107 +1,59 @@
 -- CATEGORIES
-INSERT INTO category
-    (id,category_name,icon)
-VALUES
-    (1, 'Beauty and Personal Care', '"fas fa-bath"')
-,
-    (2, 'Bed and Bedding', '"fas fa-bath"')
-,
-    (3, 'Bath and Spa', '"fas fa-bath"')
-,
-    (4, 'Cleaning', '"fas fa-bath"')
-,
-    (5, 'Baby and Kids', '"fas fa-bath"')
-,
-    (6, 'Home Improvement', '"fas fa-bath"')
-,
-    (7, 'Kitchen and Storage', '"fas fa-bath"')
-,
-    (8, 'Yard and Garden','"fas fa-bath"')
-,
-    (9, 'Pet Supplies','"fas fa-bath"')
-,
-    (10, 'On-The-Go','"fas fa-bath"')
-,
-    (11, 'Electronics','"fas fa-bath"');
+
+INSERT INTO category(id,category_name,icon) VALUES
+ (1,'Beauty and Personal Care','/assets/images/001-beatuy_and_personal_care.png')
+,(2,'Bed and Bath','/assets/images/002-bed_and_bedding.png')
+,(3,'Bath and Spa','/assets/images/003-bath_and_spa.png')
+,(4,'Cleaning','/assets/images/004-cleaning.png')
+,(5,'Baby and Kids','/assets/images/005-baby_and_kids.png')
+,(6,'Home Improvement','/assets/images/006-home_improvement.png')
+,(7,'Kitchen and Storage','/assets/images/007-kitchen_and_storage.png')
+,(8,'Yard and Garden','/assets/images/008-yard_and_garden.png')
+,(9,'Pet Supplies','/assets/images/009-pet_supplies.png')
+,(10,'On-the-Go','/assets/images/010-on-the-go.png')
+,(11,'Electronics','/assets/images/011-beatuy_and_personal_care.png');
 
 
 -- PRODUCTS
-INSERT INTO product
-    (id,product_name,categoryI_id)
-VALUES
-    (1, 'Moisturizer', 1)
-,
-    (2, 'Facial Oil', 1)
-,
-    (3, 'Shampoo', 1)
-,
-    (4, 'Sheets', 2)
-,
-    (5, 'Mattress', 2)
-,
-    (6, 'Comforter', 2)
-,
-    (7, 'Toilet Paper', 3)
-,
-    (8, 'Towels', 3)
-,
-    (9, 'Shower Head', 3)
-,
-    (10, 'Toothbrush', 3)
-,
-    (11, 'Floss', 3)
-,
-    (12, 'Cleaning Solution', 4)
-,
-    (13, 'Sponges', 4)
-,
-    (14, 'Baby Wipes', 5)
-,
-    (15, 'Nursing', 5)
-,
-    (16, 'Bedding & Décor', 5)
-,
-    (17, 'Baby Food', 5)
-,
-    (18, 'Pest Control', 6)
-,
-    (19, 'Heating & Cooling', 6)
-,
-    (20, 'Emergency supplies', 6)
-,
-    (21, 'Aluminum Foil', 7)
-,
-    (22, 'Paper Towels', 7)
-,
-    (23, 'Ziploc Bags', 7)
-,
-    (24, 'Reusable Bags', 7)
-,
-    (25, 'Compost', 8)
-,
-    (26, 'Watering', 8)
-,
-    (27, 'Flower Pot', 8)
-,
-    (28, 'Gardening Gloves', 8)
-,
-    (29, 'Shampoo', 9)
-,
-    (30, 'Bedding', 9)
-,
-    (31, 'Collars/Harnesses', 9)
-,
-    (32, 'Water Bottle', 10)
-,
-    (33, 'Hygiene', 10)
-,
-    (34, 'Utensils', 10)
-,
-    (35, 'Fitness', 10)
-,
-    (36, 'Solar', 11)
-,
-    (37, 'Home', 11);
+INSERT INTO product(id,product_name,category_id,product_description) VALUES
+ (1,'Moisturizer',1,'Many common moisturizes are purchased in a plastic container which cannot be absorbed back into the environment.  Many moisturizers contain dimethicone, which is toxic to the environment because it is a non-biodegradable chemical.')
+,(2,'Facial Oil',1,'Many skincare products contain ingredients like sodium lauryl sulfate, BHA and tricolsan.  When rinsed down the drain, these end up in our water supply and can have a negative impact both on our bodies and on the marine/wildlife.')
+,(3,'Shampoo',1,'Most common brand shampoos are purchased in a plastic container which cannot be absorbed back into the environment.  Most shampoos contain sodium laureth sulfate, which has been shown to be mutagenic to animals and can have a major impact when washed down our drains.')
+,(4,'Sheets',2,'72% of bed linens end up in landfills which contributes to 10 million tons of textile waste per year in the U.S.')
+,(5,'Mattress',2,'Americans get rid of 15-20 million mattresses per year.  These mattresses take up 132,000 miles of landfill space because they do not compact well at the landfill.')
+,(6,'Comforter',2,'Many comforters are filled with petroleum-based polyester or feathers sterilized with formaldehyde.  These chemicals prevent the comforter from breaking down for years once it reaches a landfill.')
+,(7,'Toilet Paper',3,'Toilet paper requires forests to be cut down and water is wasted to clean the pulp.  Chemicals are also involved when toilet paper is manufactured which pollutes local water sources.')
+,(8,'Towels',3,'Dyeing and treatment of textiles is responsible for 17% of industrial water pollution.  Cottons uses 3% of global water and only 1% of cotton towels are currently organic.')
+,(9,'Shower Head',3,'Shower heads are very wasteful and can use 5+ gallons of water per minute!  There is also a significant amount of energy utilized to heat the water in the shower.')
+,(10,'Toothbrush',3,'50 million pounds of toothbrushes are added to landfills in the U.S. annually!  Manual toothbrushes are made from polypropylene plastic and nylon which are non-renewable fossil fuels.')
+,(11,'Floss',3,'Most floss comes in a plastic packaging that is too small to be processed at a recycling plant.  Floss is also not reusable because it can reintroduce bacteria and plaque.')
+,(12,'Cleaning Solution',4,'Toxic chemicals are rinsed down the drains and, while some contaminants are removed, end up in our rivers and lakes.  Many throw away bottles when they''re empty and, since plastic is not biodegradable, it ends up in landfills indefinitely.')
+,(13,'Sponges',4,'Most common sponges are made of plastic, which is not biodegradable and ends up in landfills indefinitely.  Antibacterial sponges contain a chemical called triclosan which has made its way into 60% of American waterways and negatively impacts marine life.')
+,(14,'Baby Wipes',5,'Baby wipes are not biodegradable, meaning they will sit in a landfill for an indefinite amount of time!  If the wipes are flushed down the toilet, they can clog drains and end up in the oceans, having a major impact on our marine wildlife.')
+,(15,'Nursing',5,'Many common nursing products like nursing bras contain toxic dyes and cotton that is not organic, wreaking havoc on the environment.  Nursing pillows contain toxic chemicals and flame retardants that are both unsafe for baby and for the environment.')
+,(16,'Bedding & Décor',5,'Many types of furniture contains particle board which contains formaldehyde - an environmental toxin.  If furniture is not recycled, it can cause major carbon dioxide emission and take up tons of space in landfills.')
+,(17,'Baby Food',5,'Plastic baby food pouches contain plastic that is not recyclable.  The pouches are also not reusable, which creates so much plastic waste!')
+,(18,'Pest Control',6,'Pesticides contaminate soil, water, turf and vegetation.  These chemicals are toxic to many animals and organisms, including birds, fish, beneficial insects and plants.')
+,(19,'Heating & Cooling',6,'Heat pumps and air conditions use some form of refrigerant which is 1,900x worse for the environment than equal amounts of carbon dioxide!  Older appliances also tend to be much less energy efficient than newer ones, so they may be worth replacing.')
+,(20,'Emergency supplies',6,'Batteries undergo a photochemical reaction as they decompose in landfills which causes emission of greenhouse gases!  Many common products like flashlights contain plastics which are not biodegradable and sit indefinitely in landfills.')
+,(21,'Aluminum Foil',7,'Aluminum foil is even more wasteful than plastic!  To produce one ton of aluminum, it emits 12 tons of greenhouse gases and 1,400 gallons of gasoline.')
+,(22,'Paper Towels',7,'Production of paper towels consumes 110 million trees per year and 130 billion gallons of water!  The manufacturing process also requires huge amounts of energy, causing carbon dioxide to be emitted into the atmosphere.  3,000 tons of paper towels end up in landfills annually and generates methane as it decomposes.')
+,(23,'Ziploc Bags',7,'Many plastic bags cannot be recycled and end up in landfills for hundreds of years.  Many plastic bags are littered and cause death of animals like birds that consume them.')
+,(24,'Reusable Bags',7,'Canvas shopping bags would need to be used 100 times in a row to make them become environmentally safe.  Paper bags require the use of trees, water and electricity in significant amounts making them a poor choice for the environment as well.')
+,(25,'Compost',8,'Composting saves water by helping the soil hold moisture and reducing water runoff.  It also benefits the environment by recycling organic resources while conserving landfill space.')
+,(26,'Watering',8,'Overwatering plants can be waste a significant amount of water and can cause death of plants.  Many lawns and flower beds contain pesticides which, when watered, get into the soil and eventually end up in our water sources and negatively impacts wildlife.')
+,(27,'Flower Pot',8,'Plastic planters many times are not recyclable and end up in landfills.  Many plastic planters that are cracked or scratches are more prone to leaking chemicals since the planters are filled with toxic chemicals.  This is especially important if growing fruit or foods in the planters!')
+,(28,'Gardening Gloves',8,'Garden gloves contain chemicals like phthalates, flame retardants, BPA and chlorine which can leak pollutants and get into the soil and impact water sources.')
+,(29,'Shampoo',9,'Most common brand shampoos are purchased in a plastic container which cannot be absorbed back into the environment.  Most shampoos contain sodium laureth sulfate, which has been shown to be mutagenic to animals and can have a major impact when washed down our drains.')
+,(30,'Bedding',9,'72% of bed linens end up in landfills which contributes to 10 million tons of textile waste per year in the U.S.')
+,(31,'Collars/Harnesses',9,'Dog collars/harnesses are made of nylon which is not biodegradable and sits in landfills indefinitely.  The metal on the collar/harness also produces a ton of waste when it is manufactures and releases toxic fumes that have a negative impact on our air quality.')
+,(32,'Water Bottle',10,'Plastic bottles do not biodegrade and leak pollutants into soil and water as they decompose (which takes up to 1,000 years)!  U.S. landfills are currently overflowing with 2 million tons of water bottles.')
+,(33,'Hygiene',10,'When washing synthetic garments, plastic fibers make their way from the washing machine to waterways.  These microfibers that are relased can negatively impact plants and animals.')
+,(34,'Utensils',10,'Plastic utensils are rarely recycled, meaning they end up contaminating our waterways.  They are also widely littered, meaning wild animals may feed on these, cuasing injuries or killing these animals.')
+,(35,'Fitness',10,'Many yoga mats are produced using PVC, which is a cheap plastic that cannot be recycled due to toxins embedded within it.  When they reach landfills or are burned, they release dioxin which is a known carcinogen.')
+,(36,'Solar',11,'Using solar panels/energy is a great way to reduce your carbon footprint - it doesn''t pollute, doesn''t release any greenhouse gases and doesn''t use any other resources.  Traditional electricity uses fossil fuels like coal and natural gas which are both bad for the environment and are limited resources.')
+,(37,'Home',11,'Appliances left on standby contribute to 8% of the total electricity used in homes.  Keeping appliances plugged into the wall still continues to use energy, even if not in use.  Meanwhile, many thermostats are inefficient and made from plastic which is not biodegradable and lives in landfills for many years.');
+
 
 
 
