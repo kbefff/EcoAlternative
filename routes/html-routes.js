@@ -44,7 +44,7 @@ module.exports = function (app) {
   app.get("/category/:id", function (req, res) {
 
     // TODO: refactor for orm
-    connection.query("SELECT * FROM product WHERE categoryI_id = ?", [req.params.id], function (err, data) {
+    connection.query("SELECT * FROM product WHERE category_id = ?", [req.params.id], function (err, data) {
       if (err) return res.status(500).end();
       var hbsObject = {
         products: data

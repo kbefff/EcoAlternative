@@ -8,19 +8,17 @@ USE eco_alternative;
 
 
 CREATE TABLE category(
-   id INTEGER  NOT NULL PRIMARY KEY AUTO_INCREMENT
-  ,category_name VARCHAR
-(24) NOT NULL
-  ,icon VARCHAR
-(24) NOT NULL
+   id            INTEGER  NOT NULL PRIMARY KEY  AUTO_INCREMENT
+  ,category_name VARCHAR(24)
+  ,icon          VARCHAR(47)
 );
 
 
 CREATE TABLE product(
-   id INTEGER  NOT NULL PRIMARY KEY AUTO_INCREMENT
-  ,product_name VARCHAR
-(18) NOT NULL
-  ,categoryI_id INTEGER  NOT NULL
+   id                  INTEGER  NOT NULL PRIMARY KEY AUTO_INCREMENT
+  ,product_name        VARCHAR(18) NOT NULL
+  ,category_id         INTEGER  NOT NULL
+  ,product_description VARCHAR(316) NOT NULL
 );
 
 CREATE TABLE productOption
