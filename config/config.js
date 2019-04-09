@@ -5,7 +5,7 @@ module.exports = {
 
   "development": {
     "username": "root",
-    "password": "di77on&&",
+    "password": "PoopaSQL!",
     "database": "users",
     "host": "127.0.0.1",
     "dialect": "mysql"

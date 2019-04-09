@@ -1,29 +1,39 @@
-<div class="container">
-  <h4>Product Option</h4>
-</div>
+{{#each products}}
 
-<div class="container">
-  <div class="row">
-    <div class="col s12 m6">
-      <div class="card #8bc34a light-green">
-        <div class="card-content white-text">
-          <span class="card-title">{{product_name}}Moisturizer</span>
-          <p>description</p>
-        </div>
-        <div class="card-action">
-          <a href="#">Action 1</a>
-          <a href="#">Action 2</a>
+  <div class="container">
+    <h4>{{this.product_name}}</h4>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col s10"><p>{{product_description}} ["product_description" TEXT WOULD MERGE HERE. For now, we have... "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, hic. Enim minima obcaecati officiis deserunt dolore. Quas, temporibus omnis, repellendus asperiores sed similique iste eum natus, laborum sequi dolores aperiam."]</p></div>
+      <div class="col s2"><img src="../assets/images/001-beatuy_and_personal_care.png" alt="beauty_personal_care" height="45" width="45"></div>
+    </div>
+  </div>
+
+{{/each}}
+
+
+  <div class="container">
+    <h4>Product List</h4>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card #8bc34a light-green">
+          <div class="card-content white-text">
+            <span class="card-title">{{product_name}}</span>
+            <p>description</p>
+          </div>
+          <div class="card-action">
+            <a href="#" class="white-text">Action 1</a>
+            <a href="#" class="white-text">Action 2</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-
-
-{{#each products}}
-
-
-
 
 
 <ul>
@@ -48,5 +58,3 @@
   
 </ul>
 
-
-{{/each}}
