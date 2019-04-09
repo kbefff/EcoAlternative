@@ -33,9 +33,12 @@
   <div class="row center">
 {{#each categories}}
   <div class="col s4">
-    <h5>
-      <a href="/category/{{id}}">{{category_name}}<img src="{{icon}}" width="200px"/></li></a>
-    </h5>
+    {{!-- <h5> --}}
+      <a href="/category/{{id}}">
+      <h5>{{category_name}}</h5>
+      <img src="{{icon}}" width="200px"/>
+      </a>
+    {{!-- </h5> --}}
   </div>
      
 {{/each}}
