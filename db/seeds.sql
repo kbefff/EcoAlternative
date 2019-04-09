@@ -11,7 +11,7 @@ INSERT INTO category(id,category_name,icon) VALUES
 ,(8,'Yard and Garden','/assets/images/008-yard_and_garden.png')
 ,(9,'Pet Supplies','/assets/images/009-pet_supplies.png')
 ,(10,'On-the-Go','/assets/images/010-on-the-go.png')
-,(11,'Electronics','/assets/images/011-beatuy_and_personal_care.png');
+,(11,'Electronics','/assets/images/011-electronics.png');
 
 
 -- PRODUCTS
