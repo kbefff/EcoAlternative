@@ -13,11 +13,7 @@ if (process.env.JAWSDB_URL) {
     port: 3306,
     host: 'localhost',
     user: 'root',
-<<<<<<< HEAD
     password: "PoopaSQL!",
-=======
-    password: "password",
->>>>>>> master
     database: 'eco_alternative'
   })
 };

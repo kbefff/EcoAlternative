@@ -36,6 +36,7 @@ module.exports = function (app) {
       var hbsObject = {
         productOptions: data
       };
+      console.log(hbsObject);
       res.render("productOption", hbsObject);
     });
   });
