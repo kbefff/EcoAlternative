@@ -13,7 +13,7 @@ if (process.env.JAWSDB_URL) {
     port: 3306,
     host: 'localhost',
     user: 'root',
-    password: "di77on&&",
+    password: "",
     database: 'eco_alternative'
   })
 };

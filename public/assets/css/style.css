@@ -42,6 +42,55 @@ h4 {
   color: #8bc34a;
 }
 
+div.col.m4.s12 {
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+  display: inline;
+}
+
+div.col.s4 {
+  margin-bottom: 1.875rem;
+}
+
+
+
+/* ABOUT US */
+
+img.responsive {
+  max-width: 100%;
+  display: inline;
+  padding: 1rem;
+}
+
+div.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* FOOTER */
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+  
+  .page-footer {
+    background-color: #8bc34a;
+  } 
+
+
+
+
+
+  
+
 
 
 /* commenting out the below because I do not know where it come from? Should delete if not needed. */
@@ -65,3 +114,4 @@ h4 {
 .form-group {
   margin-bottom: 5px;
 } */
+
