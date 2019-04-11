@@ -12,7 +12,10 @@
 
    <!-- Materialize CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  {{!-- <script type="text/javascript" src="/assets/css/materialize.min.css"></script> --}}
+  {{!-- <script type="text/javascript" src="../assets/css/materialize.min.css"></script> --}}
+
+
+          
 
   <!--Import Google Font-->
   <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Nanum+Gothic" rel="stylesheet">
@@ -28,18 +31,20 @@
 </head>
 
 <body>
-  <!-- web view of nav -->
-  <nav class="#8bc34a light-green" style="padding: 0px 20px;" role="navigation">
+  <div id="main" style="flex: 1 0 auto;">
+    <!-- web view of nav -->
+  <nav class="#8bc34a light-green" role="navigation">
     <div class="nav-wrapper container">
-      <i style="padding: 0px 20px;" class="fas fa-leaf"></i>
-      <a id="logo-container" href="/" class="brand-logo">eco alternative</a>
+      <a id="logo-container" href="/" class="brand-logo"><i style="float: none" class="fas fa-leaf"></i>eco alt
+      </a>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="fa fa-bars material-icons"
+          aria-hidden="true"></i></a>
       <ul class="right hide-on-med-and-down nav-items">
         <li><a href="/aboutus">About Us</a></li>
         <li><a href="/">Categories</a></li>
         <li><a href="/addproduct">Add Product</a></li>
         <li><a href="/logout">Log Out</a></li>
       </ul>
-
       <!-- mobile view of nav -->
       <ul class="sidenav" id="nav-mobile">
         <li><a href="/aboutus">About Us</a></li>
@@ -47,19 +52,35 @@
         <li><a href="/addproduct">Add Product</a></li>
         <li><a href="/logout">Log Out</a></li>
       </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      
     </div>
   </nav>
 
 
 
   {{{body}}}
+  </div>
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="container" style="text-align: center">
+        <h5 class="white-text">Eco Alternative</h5>
+          <a href="https://github.com/kbefff/EcoAlternative">View our work here!</a>
+        </div>
+      </div>
+    </div>
+      <div class="footer-copyright">
+        <div class="container" style="text-align: center">
+          © 2019 Copyright
+          </div>
+        </div>
+  </footer>
 
   <!-- Compiled and minified JavaScript -->
-  {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script> --}}
-  <script type="text/javascript" src="/js/mobile.js"></script>
-  <script type="text/javascript" src="/assets/js/materialize.min.js"></script>
-  <script type="text/javascript" src="/js/product.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
+  <script type="text/javascript" src="../js/mobile.js"></script>
+  <script type="text/javascript" src="../js/materialize.min.js"></script>
+  <script type="text/javascript" src="../js/product.js"></script>
 
 
 

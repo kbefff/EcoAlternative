@@ -1,13 +1,19 @@
 <div class="container center categories">
-  {{!-- <h4>Categories</h4> --}}
+  <h4>Categories</h4>
+</div>
+
+<div class="container categories">
   <div class="row center">
-    {{#each categories}}
-      <div class="col s4">
-        <a href="/category/{{id}}">
-        <h5>{{category_name}}</h5>
-        <img src="{{icon}}" width="200px"/>
-        </a>
-      </div>    
-    {{/each}}
+{{#each categories}}
+  <div class="col m4 s12">
+    {{!-- <h5> --}}
+      <a href="/category/{{id}}">
+      <h5>{{category_name}}</h5>
+      <img src="{{icon}}" width="200px"/>
+      </a>
+    {{!-- </h5> --}}
   </div>
+     
+{{/each}}
+</div>
 </div>
