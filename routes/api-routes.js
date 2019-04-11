@@ -25,14 +25,14 @@ module.exports = function (app) {
       email: req.body.email,
       password: req.body.password
     }).then(function () {
-      res.redirect(302, "/");
+      res.redirect(307, "/api/login");
     }).catch(function (err) {
       console.log(err);
       res.json(err);
       // res.status(422).json(err.errors[0].message);
     });
   });
-  
+
   //
   // Route for logging user out
 
@@ -59,7 +59,7 @@ module.exports = function (app) {
 
 
 
-  
+
   app.get("/api/product/:id", function (req, res) {
 
     // TODO: refactor for orm

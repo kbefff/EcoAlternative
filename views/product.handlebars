@@ -1,24 +1,28 @@
-{{!-- {{#each products}}
-
-<a href="/product/{{id}}">{{product_name}}</a>
-
-{{/each}} --}}
 
   
-   <script type="text/javascript" src="/js/product.js"></script>         
-
+<div class="container">
   <label>Browser Select</label>
-  <select id="#dropdown_change" class="browser-default">
+      {{!-- <form class="login" action="/api/login" method="POST"> --}}
+
+  <select class="browser-default" action="" method="">
     <option value="" disabled selected>Choose your option</option>
     {{#each products}}
-         <option value="1"><a href="/product/{{id}}">{{product_name}}</a></option>
+         <option value="{{id}}"><a href="/product/{{id}}">{{product_name}}</a></option>
     {{/each}}
   </select>
 
 
+  <div class="displayProductOptions" id="productOptionsParial">
 
 
-  <li>{{> productOption/xproductOption}}</li>
+  {{!-- {{> productOption/xproductOption}} --}}
+
+
+  </div>
+
+</div>
+
+
 
 
             
