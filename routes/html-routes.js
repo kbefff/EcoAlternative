@@ -68,7 +68,7 @@ module.exports = function (app) {
     res.render("signup");
   });
   //route to render the create new product page
-  app.get("/addproduct", function (req, res) {
+  app.get("/addproduct", isAuthenticated, function (req, res) {
 
     res.render("form");
   });
@@ -83,7 +83,7 @@ module.exports = function (app) {
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be 
   //redirected to the signup page
-  app.get("/", function (req, res) {
+  app.get("/", isAuthenticated,function (req, res) {
     // get all values in the category table
     category.all(function (data) {
       var hbsObject = {
