@@ -4,7 +4,7 @@
 A full-stack web application that allows the user to discover eco-friendly products in order to initiate lifestyle changes.
 
 
-Link to app:
+Link to app: https://alt-eco-proj.herokuapp.com/signup
 
 
 ## Home Page
