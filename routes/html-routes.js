@@ -29,13 +29,18 @@ module.exports = function (app) {
   // when user clicks on any element from product table, trigger ajax to get /product/:id then we will see productOptions.all
   // show the products on the product page
   app.get("/product/:id", function (req, res) {
-
+    
     // TODO: refactor for orm
-    connection.query("SELECT * FROM productOption WHERE product_id = ?", [req.params.id], function (err, data) {
-      if (err) return res.status(500).end();
+    connection.query("SELECT * FROM product JOIN category ON product.category_id=category.id WHERE product.id = ?; SELECT * FROM productOption WHERE product_id = ?", [req.params.id,req.params.id], function (err, data) {
+      if (err){
+        console.log(err);
+        return res.status(500).end();
+      }
       var hbsObject = {
-        productOptions: data
+        productOptions: data[1],
+        product: data[0]
       };
+      console.log(hbsObject);
       res.render("productOption", hbsObject);
     });
   });

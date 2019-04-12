@@ -14,7 +14,8 @@ if (process.env.JAWSDB_URL) {
     host: 'localhost',
     user: 'root',
     password: process.env.PWD_DB,
-    database: 'eco_alternative'
+    database: 'eco_alternative',
+    multipleStatements: true // TODO: Look into configuring JawsDB to allow multiple queries
   })
 };
 
