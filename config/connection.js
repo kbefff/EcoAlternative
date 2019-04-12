@@ -13,8 +13,9 @@ if (process.env.JAWSDB_URL) {
     port: 3306,
     host: 'localhost',
     user: 'root',
-    password: "PoopaSQL!",
-    database: 'eco_alternative'
+    password: process.env.PWD_DB,
+    database: 'eco_alternative',
+    multipleStatements: true // TODO: Look into configuring JawsDB to allow multiple queries
   })
 };
 

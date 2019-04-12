@@ -1,40 +1,43 @@
   <div class="container">
-    {{#with productOptions.[0]}}
+    {{#with product.[0]}}
       <h4>{{product_name}}</h4>
     {{/with}}
+  </div>
+
+  {{#each product}}
+  <div class="container">
+    <div class="row">
+      <div class="col s10"><p>{{product_description}}</p></div>
+      <div class="col s2"><img src="{{icon}}" alt="beauty_personal_care" height="45" width="45"></div>
+    </div>
+  </div>
+  {{/each}}
+
+  
+  <div class="container">
+    <h4>Product List</h4>
   </div>
 
   {{#each productOptions}}
   <div class="container">
     <div class="row">
-      <div class="col s10"><p>{{product_description}} ["product_description" TEXT WOULD MERGE HERE. For now, we have... "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, hic. Enim minima obcaecati officiis deserunt dolore. Quas, temporibus omnis, repellendus asperiores sed similique iste eum natus, laborum sequi dolores aperiam."]</p></div>
-      <div class="col s2"><img src="../assets/images/001-beatuy_and_personal_care.png" alt="beauty_personal_care" height="45" width="45"></div>
-    </div>
-  </div>
-  {{/each}}
-
-
-
-  <div class="container">
-    <h4>Product List</h4>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col s12 m6">
+      <div class="col s12">
         <div class="card #8bc34a light-green">
           <div class="card-content white-text">
-            <span class="card-title">{{product_name}}</span>
-            <p>description</p>
+            <span class="card-title">{{productOption_name}}</span>
+            <p>{{environmental_impact}}</p>
+            <h5><strong>Fun Fact:</strong></h5>
+            <p>{{fun_fact}}</p>
           </div>
           <div class="card-action">
-            <a href="#" class="white-text">Action 1</a>
-            <a href="#" class="white-text">Action 2</a>
+            <a href="{{external_link}}" target="_blank" class="white-text"><img src="{{image}}" height="60" width="60"></a>
+            <a href="{{source}}" target="_blank" class="white-text">See Source</a>
           </div>
         </div>
       </div>
     </div>
   </div>
+  {{/each}}
 
 
 <ul>

@@ -57,9 +57,6 @@ module.exports = function (app) {
     }
   });
 
-
-
-
   app.get("/api/product/:id", function (req, res) {
 
     // TODO: refactor for orm
@@ -67,6 +64,19 @@ module.exports = function (app) {
       if (err) return res.status(500).end();
       var hbsObject = {
         productOptions: data
+      };
+      res.json(hbsObject);
+    });
+  });
+
+  // to show the product description (e.g., "Shampoo")
+  app.get("/api/producttype/:id", function (req, res) {
+
+    // TODO: refactor for orm
+    connection.query("SELECT * FROM product WHERE id = ?", [req.params.id], function (err, data) {
+      if (err) return res.status(500).end();
+      var hbsObject = {
+        product: data
       };
       res.json(hbsObject);
     });

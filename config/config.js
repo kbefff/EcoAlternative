@@ -5,7 +5,7 @@ module.exports = {
 
   "development": {
     "username": "root",
-    "password": "PoopaSQL!",
+    "password": process.env.PWD_DB,
     "database": "users",
     "host": "127.0.0.1",
     "dialect": "mysql"
