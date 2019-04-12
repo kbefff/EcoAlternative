@@ -1,21 +1,84 @@
-<ul>
-  {{#each productOptions}}
-  {{!-- <li>{{id}}</li>
-  <li>{{product_name}}</li> --}}
-{{!-- 
-  <li>{{product.ingredients}}</li> --}}
-  <li>{{product_Id}}</li>
-  <li>{{ingredients}}</li>
-  <li>{{plastic_free}}</li>
-  <li>{{reusable}}</li>
-  <li>{{price}}</li>
-  <li>{{stylish}}</li>
-  <li>{{environmental_impact}}</li>
-  <li>{{external_link}}</li>
-  <li>{{fun_fact}}</li>
-  <li>{{source}}</li>
-
-  {{!-- <li>{{image}}</li> --}}
-
+<div class="container">
+  {{#each product}}
+  <h4>{{product_name}}</h4>
   {{/each}}
-</ul>
+</div>
+
+{{#each product}}
+<div class="container">
+  <div class="row">
+    <div class="col s10">
+      <p>{{product_description}}</p>
+    </div>
+    <div class="col s2"><img src="{{icon}}" alt="beauty_personal_care" height="45" width="45"></div>
+  </div>
+</div>
+{{/each}}
+
+
+<div class="container">
+  <h4>Product List</h4>
+</div>
+
+{{#each productOptions}}
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <div class="card horizontal #8bc34a light-green">
+        <div class="card-image">
+          <a href="{{external_link}}" target="_blank" class="white-text"><img src="{{image}}" height="240"
+              width="240"></a>
+        </div>
+        <div class="card-stacked">
+          <div class="card-content white-text">
+            <span class="card-title">{{productOption_name}}</span>
+            <p>{{environmental_impact}}</p>
+            <h5><strong>Fun Fact</strong></h5>
+            <p>{{fun_fact}}</p>
+            
+              
+              <h5><strong>Quick Facts</strong></h5> 
+                <div >
+                    {{#if plastic_free}}
+                      <p> Plastic Free: <i class="fas fa-smile"></i></p>
+                      {{else}}
+                      <p> Plastic Free:<i class="far fa-frown"></i></p>
+                    {{/if}}
+                </div>
+                
+                <div >
+                  {{#if reusable}}
+                    <p> Reusable: <i class="fas fa-smile"></i></p>
+                    {{else}}
+                    <p> Reusable: <i class="far fa-frown"></i></p>
+                  {{/if}}
+                </div>
+                <div >
+                  {{#if stylish}}
+                    <p> Stylish: <i class="fas fa-smile"></i></p>
+                    {{else}}
+                    <p> Stylish: <i class="far fa-frown"></i></p>
+                  {{/if}}
+                </div>
+                <div >
+                  {{#if ingredients}}
+                    <p> Ingredients: <i class="fas fa-smile"></i></p>
+                    {{else}}
+                    <p> Ingredients: <i class="far fa-frown"></i><p>
+                  {{/if}}
+                </div>
+              
+            
+          </div>  
+          <div class="card-action">
+            
+            <a href="{{source}}" target="_blank" class="white-text">See Source</a>
+          </div>
+        
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}

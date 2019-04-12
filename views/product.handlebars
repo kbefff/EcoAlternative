@@ -1,25 +1,9 @@
 
   
-<div class="container">
-  <label>Browser Select</label>
-      {{!-- <form class="login" action="/api/login" method="POST"> --}}
-
-  <select class="browser-default" action="" method="">
-    <option value="" disabled selected>Choose your option</option>
-    {{#each products}}
-         <option value="{{id}}"><a href="/product/{{id}}">{{product_name}}</a></option>
-    {{/each}}
-  </select>
-
-
-  <div class="displayProductOptions" id="productOptionsParial">
-
-
-  {{!-- {{> productOption/xproductOption}} --}}
-
-
-  </div>
-
+<div class="container center">
+{{#each products}}
+<ul><li><h5><a href="/product/{{id}}">{{product_name}}</a></h5></li></ul>
+{{/each}}
 </div>
 
 

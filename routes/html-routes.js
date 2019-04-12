@@ -28,7 +28,7 @@ module.exports = function (app) {
 
   // when user clicks on any element from product table, trigger ajax to get /product/:id then we will see productOptions.all
   // show the products on the product page
-  app.get("/product/:id", isAuthenticated, function (req, res) {
+  app.get("/product/:id",  function (req, res) {
 
     // TODO: refactor for orm
     connection.query("SELECT * FROM productOption WHERE product_id = ?", [req.params.id], function (err, data) {
@@ -41,7 +41,7 @@ module.exports = function (app) {
   });
 
   //Dynamic routing to return our categories to the page
-  app.get("/category/:id", isAuthenticated, function (req, res) {
+  app.get("/category/:id",  function (req, res) {
 
     // TODO: refactor for orm
     connection.query("SELECT * FROM product WHERE category_id = ?", [req.params.id], function (err, data) {
@@ -68,13 +68,13 @@ module.exports = function (app) {
     res.render("signup");
   });
   //route to render the create new product page
-  app.get("/addproduct", isAuthenticated, function (req, res) {
+  app.get("/addproduct",  function (req, res) {
 
     res.render("form");
   });
 
   //Route to render our abut us page
-  app.get("/aboutus", isAuthenticated, function (req, res) {
+  app.get("/aboutus",  function (req, res) {
 
     res.render("aboutus")
   })
@@ -83,7 +83,7 @@ module.exports = function (app) {
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be 
   //redirected to the signup page
-  app.get("/", isAuthenticated,function (req, res) {
+  app.get("/", function (req, res) {
     // get all values in the category table
     category.all(function (data) {
       var hbsObject = {

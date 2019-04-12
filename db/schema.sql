@@ -3,8 +3,8 @@ DROP DATABASE IF EXISTS eco_alternative;
 CREATE DATABASE eco_alternative;
 USE eco_alternative;
 -DROP TABLE IF EXISTS category;
--- DROP TABLE IF EXISTS product;
--- DROP TABLE IF EXISTS productOption;
+DROP TABLE IF EXISTS product;
+DROP TABLE IF EXISTS productOption;
 
 
 CREATE TABLE category(
@@ -30,16 +30,16 @@ CREATE TABLE productOption
   ,productOption_name   VARCHAR
   (56) NOT NULL
   ,product_Id           INTEGER  NOT NULL
-  ,ingredients          VARCHAR
-  (5) NOT NULL
-  ,plastic_free         VARCHAR
-  (5) NOT NULL
-  ,reusable             VARCHAR
-  (5) NOT NULL
+  ,ingredients          BOOLEAN
+  
+  ,plastic_free         BOOLEAN
+  
+  ,reusable             BOOLEAN
+  
   ,price                VARCHAR
   (5) NOT NULL
-  ,stylish              VARCHAR
-  (5) NOT NULL
+  ,stylish              BOOLEAN
+  
   ,environmental_impact VARCHAR
   (688) NOT NULL
   ,image                VARCHAR

@@ -72,4 +72,16 @@ module.exports = function (app) {
     });
   });
 
+  app.get("/api/options/:id", function (req, res) {
+
+    // TODO: refactor for orm
+    connection.query("SELECT * FROM product WHERE category_id = ?", [req.params.id], function (err, data) {
+      if (err) return res.status(500).end();
+      var hbsObject = {
+        productOptions: data
+      };
+      res.json(hbsObject);
+    });
+  });
+
 };
